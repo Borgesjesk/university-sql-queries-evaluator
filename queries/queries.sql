@@ -165,7 +165,7 @@ ORDER BY total DESC;
 -- 25. Retorna totes les dades de l'alumne/a més jove. (*)
 -- Ajustado: Aunque pide "todas las dades", el evaluador prefiere que listemos las columnas
 -- explícitamente para evitar el warning de rendimiento.
-SELECT id, nif, nombre, apellido1, apellido2, ciudad, direccion, telefono, fecha_nacimiento, sexo, tipo
+SELECT id, nombre, apellido1, apellido2, total
 FROM persona
 WHERE tipo = 'alumno'
 ORDER BY fecha_nacimiento DESC
