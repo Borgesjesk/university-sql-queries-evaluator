@@ -1,31 +1,31 @@
+USE universidad;
+
 -- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els/les alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
-SELECT apellido1, apellido2, nombre
-FROM persona-- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els/les alumnes.
 SELECT apellido1, apellido2, nombre
 FROM persona
 WHERE tipo = 'alumno'
 ORDER BY apellido1, apellido2, nombre ASC;
 
--- 2. Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu telèfon.
+-- 2. Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
 SELECT nombre, apellido1, apellido2
 FROM persona
 WHERE tipo = 'alumno'
   AND telefono IS NULL;
 
--- 3. Retorna el llistat dels alumnes que van néixer en 1999 (només nombre, apellido1, apellido2 segons el teu diff).
-SELECT nombre, apellido1, apellido2
+-- 3. Retorna el llistat dels alumnes que van néixer en 1999.
+SELECT id, nombre, apellido1, apellido2, fecha_nacimiento
 FROM persona
 WHERE tipo = 'alumno'
   AND YEAR(fecha_nacimiento) = 1999;
 
--- 4. Professors sense telèfon i NIF acabat en K.
+-- 4. Retorna el llistat de professors/es que no han donat d'alta el seu número de telèfon en la base de dades i a més el seu NIF acaba en K.
 SELECT nombre, apellido1, apellido2, nif
 FROM persona
 WHERE tipo = 'profesor'
   AND telefono IS NULL
-  AND nif LIKE '%K';
+  AND NIF LIKE '%K';
 
--- 5. Assignatures 1er quadrimestre, 3er curs, grau 7.
+-- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7.
 SELECT id, nombre, cuatrimestre, curso, id_grado
 FROM asignatura
 WHERE cuatrimestre = 1
@@ -145,7 +145,7 @@ FROM grado g
 GROUP BY g.nombre
 HAVING COUNT(a.id) > 40;
 
--- 22. Crèdits per tipus i grau (Compte amb l'àlies 'tipus')
+-- 22. Retorna un llistat que mostri el nom dels graus i la suma del nombre total de crèdits que hi ha per a cada tipus d'assignatura.
 SELECT g.nombre AS grau, a.tipo AS tipus, SUM(a.creditos) AS total_creditos
 FROM grado g
          JOIN asignatura a ON g.id = a.id_grado
