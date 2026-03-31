@@ -9,8 +9,8 @@ SELECT nombre, apellido1, apellido2
 FROM persona
 WHERE tipo = 'alumno' AND telefono IS NULL;
 
--- 3. Retorna el llistat dels alumnes que van néixer en 1999.
-SELECT id, nombre, apellido1, apellido2, fecha_nacimiento
+-- 3. Retorna el llistat dels alumnes que van néixer en 1999. (nombre, apellido1, apellido2)
+SELECT nombre, apellido1, apellido2
 FROM persona
 WHERE tipo = 'alumno' AND YEAR(fecha_nacimiento) = 1999;
 
@@ -87,8 +87,8 @@ SELECT id, nombre
 FROM asignatura
 WHERE id_profesor IS NULL;
 
--- 15. Departaments que no han impartit cap assignatura.
-SELECT d.nombre
+-- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
+SELECT DISTINCT d.nombre
 FROM departamento d
          LEFT JOIN profesor prof ON d.id = prof.id_departamento
          LEFT JOIN asignatura asig ON prof.id_profesor = asig.id_profesor
@@ -131,7 +131,7 @@ FROM grado g
 GROUP BY g.id
 HAVING total > 40;
 
--- 22. Crèdits per tipus d'assignatura i grau.
+-- 22. Retorna un llistat que mostri el nom dels graus i la suma del nombre total de crèdits... (grau, tipus, total_creditos)
 SELECT g.nombre AS grau, a.tipo AS tipus, SUM(a.creditos) AS total_creditos
 FROM grado g
          JOIN asignatura a ON g.id = a.id_grado
