@@ -144,7 +144,7 @@ GROUP BY g.nombre
 HAVING COUNT(a.id) > 40;
 
 -- 22. Retorna un llistat que mostri el nom dels graus i la suma del nombre total de crèdits que hi ha per a cada tipus d'assignatura.
-SELECT g.nombre AS grau, a.tipo AS tipus, SUM(a.creditos) AS total_creditos
+SELECT g.nombre AS grau, a.tipo, SUM(a.creditos) AS total_creditos
 FROM grado g
          JOIN asignatura a ON g.id = a.id_grado
 GROUP BY g.nombre, a.tipo;
@@ -165,7 +165,7 @@ GROUP BY p.id, p.nombre, p.apellido1, p.apellido2
 ORDER BY total DESC;
 
 -- 25. Retorna totes les dades de l'alumne/a més jove.
-SELECT *
+SELECT id, nif, nombre, apellido1, apellido2, ciudad, direccion, telefono, fecha_nacimiento, sexo, tipo
 FROM persona
 WHERE tipo = 'alumno'
   AND fecha_nacimiento = (SELECT MAX(fecha_nacimiento)
