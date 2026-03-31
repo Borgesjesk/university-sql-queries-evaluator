@@ -179,3 +179,4 @@ FROM persona p
          JOIN departamento d ON prof.id_departamento = d.id
          LEFT JOIN asignatura a ON prof.id_profesor = a.id_profesor
 WHERE a.id IS NULL;
+
