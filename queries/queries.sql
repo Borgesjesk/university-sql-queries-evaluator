@@ -4,8 +4,6 @@
  * DESCRIPCIÓN: Implementación optimizada para validador automático.
  */
 
-USE universidad;
-
 -- 1. Listado de alumnos ordenado alfabéticamente
 SELECT apellido1, apellido2, nombre
 FROM persona
@@ -19,7 +17,7 @@ WHERE tipo = 'alumno'
   AND telefono IS NULL;
 
 -- 3. Alumnos nacidos en 1999
-SELECT id, nombre, apellido1, apellido2, fecha_nacimiento
+SELECT nombre, apellido1, apellido2
 FROM persona
 WHERE tipo = 'alumno'
   AND YEAR(fecha_nacimiento) = 1999;
