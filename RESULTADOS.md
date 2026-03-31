@@ -31,7 +31,7 @@
 +Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -49,7 +49,7 @@
 +Ismael | Strosin | Turcotte
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -62,12 +62,12 @@
 -nombre | apellido1 | apellido2 | nif
 -Antonio | Fahey | Considine | 10485008K
 -Guillermo | Ruecker | Upton | 85869555K
-+id | nombre | apellido1 | apellido2 | fecha_nacimiento
-+7.00 | Ismael | Strosin | Turcotte | 1999-05-24
-+22.00 | Antonio | Domínguez | Guerrero | 1999-02-11
++nombre | apellido1 | apellido2
++Ismael | Strosin | Turcotte
++Antonio | Domínguez | Guerrero
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -121,7 +121,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -150,7 +150,7 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
@@ -169,7 +169,7 @@
 ```
 
 ⏱ Tiempo: 0.55 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
 
 ---
 
@@ -186,8 +186,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.39 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
 
 ---
 
@@ -215,8 +215,8 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
@@ -241,7 +241,7 @@
 +Química y Física | Stiedemann | Morissette | Alfredo
 ```
 
-⏱ Tiempo: 0.41 ms
+⏱ Tiempo: 0.40 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -258,7 +258,7 @@
 +apellido1 | apellido2 | nombre
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -371,8 +371,8 @@
 +Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
+⏱ Tiempo: 0.34 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
 
@@ -484,7 +484,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
 
 ---
@@ -499,7 +499,7 @@
 +12.00
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -520,7 +520,7 @@
 +2.00
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -577,7 +577,7 @@
 +Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
 
 ---
@@ -600,7 +600,7 @@
 +Grado en Química (Plan 2009) | 0.00
 ```
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
 
 ---
@@ -620,8 +620,8 @@
 +Grado en Ingeniería Informática (Plan 2015) | 51.00
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
@@ -641,8 +641,8 @@
 +Grado en Biotecnología (Plan 2015) | obligatoria | 120.00
 ```
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
@@ -669,7 +669,7 @@
 +2018.00 | 3.00
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: id_curso_escolar, PRIMARY
 
 ---
@@ -696,8 +696,8 @@
 +20.00 | Francesca | Schowalter | Muller | 0.00
 ```
 
-⏱ Tiempo: 0.37 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor, PRIMARY,nif
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY,nif, PRIMARY
 
 ---
 
