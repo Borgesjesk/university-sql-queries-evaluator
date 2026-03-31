@@ -31,7 +31,7 @@
 +Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.43 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -49,7 +49,7 @@
 +Ismael | Strosin | Turcotte
 ```
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -67,7 +67,7 @@
 +22.00 | Antonio | Domínguez | Guerrero | 1999-02-11
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -89,7 +89,7 @@
 +Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -121,7 +121,7 @@
 +77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.36 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -150,8 +150,8 @@
 +Streich | Hirthe | Carmen | Educación
 ```
 
-⏱ Tiempo: 0.39 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
@@ -168,8 +168,8 @@
 +Física para informática | 2014.00 | 2015.00
 ```
 
-⏱ Tiempo: 0.53 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
+⏱ Tiempo: 0.54 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
@@ -186,8 +186,8 @@
 +Informática
 ```
 
-⏱ Tiempo: 0.40 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
 
 ---
 
@@ -215,8 +215,8 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.40 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
@@ -285,7 +285,7 @@
 +Biología y Geología
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.43 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -371,8 +371,8 @@
 +Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
 
@@ -456,7 +456,7 @@
 +83.00 | Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -485,7 +485,7 @@
 ```
 
 ⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
+✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
 
 ---
 
@@ -544,8 +544,8 @@
 -Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
 
 ---
 
@@ -577,8 +577,8 @@
 +Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
+⏱ Tiempo: 0.34 ms
+✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
 
 ---
 
@@ -601,7 +601,7 @@
 ```
 
 ⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
+✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
@@ -620,8 +620,8 @@
 +Grado en Ingeniería Informática (Plan 2015) | 51.00
 ```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
@@ -641,8 +641,8 @@
 +Grado en Biotecnología (Plan 2015) | obligatoria | 120.00
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
@@ -669,7 +669,7 @@
 +2018.00 | 3.00
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_curso_escolar, PRIMARY
 
 ---
@@ -696,7 +696,7 @@
 +20.00 | Francesca | Schowalter | Muller | 0.00
 ```
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.40 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, id_profesor
 
 ---
@@ -721,7 +721,7 @@
 +4.00 | 17105885A | Pedro | Heller | Pagac | Almería | C/ Estrella fugaz | NULL | 2000-10-05 | H | alumno
 ```
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
